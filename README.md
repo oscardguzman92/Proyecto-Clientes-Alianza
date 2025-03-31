@@ -50,7 +50,7 @@ Para clonar este proyecto con los repositorios de frontend y backend incluidos c
 
 ```sh
 git clone --recurse-submodules https://github.com/TU_USUARIO/Proyecto-Cliente-Alianza.git
-
+ ```
 
 ## Ejecución en Local y en Producción  
 
@@ -93,6 +93,7 @@ server {
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     }
 }
+```
 
 ## Seguridad  
 
@@ -106,10 +107,14 @@ server {
 
 ### Patrones de Diseño Aplicados  
 
-- **Repository Pattern**: Manejo de persistencia desacoplada.  
+- **Repository**: Maneja la persistencia desacoplada de la capa de dominio.
 - **Singleton**: Uso en `RequestResponseLoggingFilter` para la gestión de logs.  
-- **Adapter**: Implementado en la comunicación entre capas, por ejemplo, al usar `JpaRepository`.  
+- **Adapter**: Implementado en la comunicación entre capas, por ejemplo, en el uso de `JpaRepository`, `ClientRepository` adapta `IClientJpaRepository` para cumplir con `IClientRepository`  
 
+## Flujo de comunicación
+ClientController -> IClienteService -> ClientService -> IClienteRepository 
+                 -> ClienteRepository (Adapter) -> IClientJpaRepository (Extiende JpaRepository)
+                 
 ### Decisiones Claves  
 
 - Uso de **Angular Material** para una interfaz visual moderna.  
