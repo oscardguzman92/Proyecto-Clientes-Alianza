@@ -1,0 +1,6 @@
+[submodule "backend"]
+	path = backend
+	url = https://github.com/oscardguzman92/clients_service.git
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/oscardguzman92/app-alianza.git
