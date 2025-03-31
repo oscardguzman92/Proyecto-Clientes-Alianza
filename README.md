@@ -126,9 +126,11 @@ ClientController -> IClienteService -> ClientService -> IClienteRepository
 
 ### Pruebas Implementadas  
 
-- **Pruebas Unitarias** en el backend con:  
-  - **JUnit 5** (framework de pruebas en Java).  
-  - **Mockito** (para simulación de dependencias y pruebas de servicios).  
+- **Pruebas Unitarias**:  
+  - **JUnit 5** (framework de pruebas en Java, utilizado para validar la funcionalidad de los componentes individuales).  
+  - **Mockito** (para simulación de dependencias y pruebas de servicios, permitiendo verificar interacciones y aislar componentes).
+  - **Jasmine** (framework de pruebas unitarias para JavaScript y TypeScript, utilizado para validar la lógica de los componentes y servicios en Angular)
+  -  **Karma** (Ejecutador de pruebas para Angular que facilita la integración con Jasmine y permite correr pruebas en diferentes navegadores y entornos de desarrollo)
 
 ## Referencias y Recursos Adicionales  
 
@@ -141,5 +143,5 @@ ClientController -> IClienteService -> ClientService -> IClienteRepository
 
 ## Conclusión  
 
-Este documento proporciona una guía clara sobre el desarrollo, despliegue y estructura del **Proyecto-Clientes-Alianza**.  
-Se destacan buenas prácticas en **arquitectura, patrones de diseño y gestión de infraestructura con Docker**, asegurando una aplicación **escalable y mantenible**.  
+Este documento ofrece una guía detallada sobre el desarrollo, despliegue y estructura del **Proyecto-Clientes-Alianza**, proporcionando una visión integral de su arquitectura y funcionamiento.  
+Se destacan buenas prácticas en **arquitectura, patrones de diseño y gestión de infraestructura con Docker**, garantizando una aplicación escalable, modular y fácil de mantener. De esta forma, la implementación de estos principios permite una mayor eficiencia en el desarrollo, facilitando futuras mejoras y adaptaciones a nuevos requerimientos. 
